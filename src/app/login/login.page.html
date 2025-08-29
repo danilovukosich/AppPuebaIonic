@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="text-center h-30 text-3xl font-bold">Prueba app</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="h-full w-full flex items-center justify-center bg-gray-200">
+    <div class=" p-6 ">
+      <ion-card class="px-4 pt-10 pb-20 rounded-2xl flex flex-col justify-center shadow-2xl">
+        <ion-card-header>
+          <ion-card-title class="mb-2 text-center text-3xl">Inicio de sesión</ion-card-title>
+          <ion-card-subtitle class="text-center mb-12">
+            <div class="w-full px-18">
+              <div class="h-0.5 w-full bg-blue-400"></div>
+            </div>
+          </ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-input type="text" label="Mail" placeholder="Ingrese mail..." [(ngModel)]="mailSelected">
+          </ion-input>
+
+          <ion-input class="mt-4" type="password" label="Contraseña" placeholder="Ingrese contraseña..." [(ngModel)]="passwordSelected">
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+          </ion-input>
+
+          <ion-buttons class="mt-12 justify-center rounded-2xl bg-blue-400 text-black py-2 px-0">
+            <ion-button (click)="login()" > Iniciar sesíon </ion-button>
+          </ion-buttons>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
