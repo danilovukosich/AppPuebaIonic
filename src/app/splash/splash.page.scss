@@ -1,0 +1,57 @@
+.splash-screen {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; // ocupa toda la pantalla
+}
+
+
+
+.logo {
+  width: 150px;
+  height: auto;
+  animation: wiggle 1s ease-in-out 2, fadeOut 1s ease-in-out 2s forwards;
+  /*
+    wiggle -> 1s de duración, ease-in-out, se repite 2 veces
+    fadeOut -> arranca a los 2s y oculta el logo
+  */
+}
+
+@keyframes wiggle {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  15% {
+    transform: rotate(-5deg);
+  }
+
+  30% {
+    transform: rotate(5deg);
+  }
+
+  45% {
+    transform: rotate(-4deg);
+  }
+
+  60% {
+    transform: rotate(4deg);
+  }
+
+  75% {
+    transform: rotate(-2deg);
+  }
+
+  90% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}

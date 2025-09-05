@@ -16,8 +16,7 @@ import {
   IonInputPasswordToggle,
   IonButton,
   IonButtons,
-  ToastController,
-} from '@ionic/angular/standalone';
+  ToastController, IonItem } from '@ionic/angular/standalone';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
@@ -25,7 +24,7 @@ import { Router, RouterModule } from '@angular/router';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   standalone: true,
-  imports: [
+  imports: [IonItem,
     IonButtons,
     IonButton,
     IonInput,

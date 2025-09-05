@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title class="text-center h-30 text-3xl font-bold">Prueba app</ion-title>
+    <ion-title class="text-center h-30 text-4xl font-bold">Prueba app</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,10 +11,10 @@
     </ion-toolbar>
   </ion-header>
   <div class="h-full w-full flex items-center justify-center bg-gray-200">
-    <div class=" p-6 ">
+    <div>
       <ion-card class="px-4 pt-10 pb-20 rounded-2xl flex flex-col justify-center shadow-2xl">
         <ion-card-header>
-          <ion-card-title class="mb-2 text-center text-3xl">Inicio de sesión</ion-card-title>
+          <ion-card-title class="mb-2 text-center text-3xl text-blue-500">Inicio de sesión</ion-card-title>
           <ion-card-subtitle class="text-center mb-12">
             <div class="w-full px-18">
               <div class="h-0.5 w-full bg-blue-400"></div>
@@ -23,15 +23,22 @@
         </ion-card-header>
 
         <ion-card-content>
-          <ion-input type="text" label="Mail" placeholder="Ingrese mail..." [(ngModel)]="mailSelected">
-          </ion-input>
+           <ion-item>
+            <ion-input  color="primary" type="text" label="Mail" labelPlacement="floating" placeholder="Ingrese mail..." [(ngModel)]="mailSelected">
+            </ion-input>
+           </ion-item>
 
-          <ion-input class="mt-4" type="password" label="Contraseña" placeholder="Ingrese contraseña..." [(ngModel)]="passwordSelected">
-            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
-          </ion-input>
+          <ion-item>
+            <ion-input color="primary" class="mt-4" type="password" label="Contraseña" labelPlacement="floating" placeholder="Ingrese contraseña..." [(ngModel)]="passwordSelected">
+              <ion-input-password-toggle slot="end" class="text-green-400"></ion-input-password-toggle>
+            </ion-input>
+          </ion-item>
 
-          <ion-buttons class="mt-12 justify-center rounded-2xl bg-blue-400 text-black py-2 px-0">
-            <ion-button (click)="login()" > Iniciar sesíon </ion-button>
+          <ion-buttons class="mt-12 justify-center rounded-2xl text-black  py-2 px-0 flex flex-col gap-y-4">
+            <ion-button (click)="login()" shape="round" class="bg-blue-400 font-bold  rounded-2xl p-2 transition ease-in hover:scale-110"> Iniciar sesíon </ion-button>
+            <div class="text-gray-500 flex">
+              <div>¿No tiene una cuenta? <a class="underline cursor-pointer text-black">Registrate</a></div>
+            </div>
           </ion-buttons>
         </ion-card-content>
       </ion-card>
